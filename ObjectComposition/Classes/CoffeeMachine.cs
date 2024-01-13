@@ -1,11 +1,10 @@
-﻿namespace ObjectComposition.Classes
-{
-    internal class CoffeeMachine
-    {
-        public int WaterTemperature { get; set; }
+﻿namespace ObjectComposition.Classes;
 
-        public void MakeCoffee()
-        {
-        }
+internal class CoffeeMachine
+{
+    public int WaterTemperature { get; set; }
+
+    public void MakeCoffee()
+    {
     }
 }

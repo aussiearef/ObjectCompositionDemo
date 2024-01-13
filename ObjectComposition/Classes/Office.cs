@@ -1,23 +1,22 @@
 ﻿using System.Collections.Generic;
 
-namespace ObjectComposition.Classes
+namespace ObjectComposition.Classes;
+
+internal class Office
 {
-    internal class Office
+    private readonly CoffeeMachine _coffeeMaker;
+
+    internal Office()
     {
-        private readonly CoffeeMachine _coffeeMaker;
+        _coffeeMaker = new CoffeeMachine();
+    }
 
-        internal Office()
-        {
-            _coffeeMaker = new CoffeeMachine();
-        }
-
-        public List<Employee> Employees { get; set; } = new List<Employee>();
+    public List<Employee> Employees { get; set; } = new();
 
 
-        private void StartWorkDay()
-        {
-            var manager = new Manager(_coffeeMaker);
-            manager.StartDay();
-        }
+    internal void StartWorkDay()
+    {
+        var manager = new Manager(_coffeeMaker);
+        manager.StartDay();
     }
 }

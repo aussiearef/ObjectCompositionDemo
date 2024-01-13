@@ -1,8 +1,7 @@
-﻿namespace ObjectComposition.Classes
+﻿namespace ObjectComposition.Classes;
+
+internal class Car
 {
-    internal class Car
-    {
-        public string Make { get; set; } = "Mecedes-Benz";
-        public Employee Owner { get; set; }
-    }
+    public string Make { get; set; } = "Mecedes-Benz";
+    public Employee Owner { get; set; }
 }
